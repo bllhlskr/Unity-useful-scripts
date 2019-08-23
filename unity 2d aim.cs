@@ -6,7 +6,7 @@ public class spawn : MonoBehaviour
 {
     [SerializeField]Camera main;
     [SerializeField] GameObject ball;
-    [SerializeField] float bulletSpeed = 5f;
+    [SerializeField] float Speed = 5f;
     Vector3 target;
      // Start is called before the first frame update
     void Start()
@@ -37,7 +37,7 @@ public class spawn : MonoBehaviour
     {
 
         GameObject balls = Instantiate(ball,transform.position,Quaternion.Euler(0f,0f,rotation)) as GameObject;
-        balls.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+        balls.GetComponent<Rigidbody2D>().velocity = direction * Speed;
        Debug.Log(direction);
 
     }
